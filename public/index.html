@@ -12,7 +12,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./assets/imgs/logo.png" />
   <link rel="stylesheet" href="./index.css">
-  <title>malki</title>
+  <title>pic-Up</title>
 </head>
 
 <body>
@@ -20,7 +20,8 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" id="nav-home-link"><img src="./assets/imgs/logo.png" alt="logo" width="45" height="34" /></a>
+          <a class="navbar-brand" href="#" id="nav-home-link"><img src="./assets/imgs/logo.PNG"
+              alt="our logo-camera picture" width="45" height="34"/></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -47,7 +48,6 @@
         </div>
       </nav>
     </header>
-    <div id="toast"></div>
 
     <main>
       <!-- Home page -->
@@ -71,7 +71,7 @@
         <form class="row g-3" onsubmit="event.preventDefault()">
           <h6>name</h6>
           <div class="col-md-6">
-            <label for="form-label" class="form-label Required-field">Name</label>
+            <label for="form-label" class="form-label red-asterik">Name</label>
             <input type="text" class="form-control" id="signup-input-name">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-name">
@@ -79,7 +79,7 @@
             This field can only be used with letters and numbers,
           </div>
           <div class="col-md-6">
-            <label for="input-last-name" class="form-label Required-field">Last Name</label>
+            <label for="input-last-name" class="form-label red-asterik">Last Name</label>
             <input type="text" class="form-control" id="input-last-name">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-last-name">
@@ -89,34 +89,34 @@
           <h6>Address</h6>
            <div class="col-md-4">
             <label for="input-state" class="form-label">State</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-state">
+            <input type="text" class="form-control inp-string" id="signup-input-state">
           </div>
           <div class="col-md-4">
             <label for="input-country" class="form-label">Country</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-country">
+            <input type="text" class="form-control inp-string" id="signup-input-country">
              
           </div>
          
           <div class="col-md-4">
             <label for="input-city" class="form-label">City</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-city">
+            <input type="text" class="form-control inp-string" id="signup-input-city">
           </div>
           <div class="col-md-4">
             <label for="input-street" class="form-label">Street</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-street">
+            <input type="text" class="form-control inp-string" id="signup-input-street">
           </div>
           <div class="col-md-4">
             <label for="input-house-number" class="form-label">House Number</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-house-number">
+            <input type="text" class="form-control inp-string" id="signup-input-house-number">
           </div>
           <div class="col-md-4">
             <label for="input-zip-code" class="form-label ">Zip Code</label>
-            <input type="text" class="form-control inp-string" id="signup-page-input-house-number">
+            <input type="text" class="form-control inp-string" id="signup-input-zip">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="input-rules">Address details should contain at least 2 characters, letters and numbers only</div>
           <h6>Means of contact</h6>
           <div class="col-md-6">
-            <label for="input-email" class="form-label Required-field">Email</label>
+            <label for="input-email" class="form-label red-asterik">Email</label>
             <input type="email" class="form-control" id="signup-input-email">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-email">
@@ -124,21 +124,21 @@
           </div>
           <div class="col-md-6">
             <label for="input-phone" class="form-label">Phone</label>
-            <input type="text" class="form-control" id="signup-input-phone">
+            <input type="text" class="form-control" id="input-phone">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-phone">
             Your phone number must contain only digits.
           </div>
           <h6>Security</h6>
           <div class="col-md-6">
-            <label for="inputPassword1" class="form-label Required-field">Password</label>
+            <label for="inputPassword1" class="form-label red-asterik">Password</label>
             <input type="text" class="form-control" id="signup-input-password1">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-password1">
             You must use uppercase letter, lowercase letter, numbers, special sign
           </div>
           <div class="col-md-6">
-            <label for="inputPassword2" class="form-label Required-field">Re-Enter Password</label>
+            <label for="inputPassword2" class="form-label red-asterik">Re-Enter Password</label>
             <input type="text" class="form-control" id="signup-input-password2">
           </div>
           <div class="alert alert-danger d-none" role="alert" id="signup-alert-repassword2">
@@ -150,23 +150,20 @@
          
           <div class="col-12">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="business-client">
+              <input class="form-check-input" type="checkbox" id="business-client" value="false">
               <label class="form-check-label" for="gridCheck">
                 Business Client
               </label>
             </div>
           </div>
           <div class="col-12">
-            <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary" disabled="true" id="signup-btn-signup">Sign in</button>
           </div>
-          <br>
           <div class="col-12">
-            <div class="d-grid gap-2">
             <button type="submit" class="btn btn-danger">Cancel</button>
           </div>
         </form>
-
+<div id="toast"></div>
       </div>
       <!-- login page -->
       <div id="login-page" class="d-none">
@@ -186,6 +183,7 @@
           <div class="alert alert-danger d-none" role="alert" id="login-alert-password">
             Password rules
           </div>
+
           <button class="btn btn-primary" id="login-btn">Submit</button>
         </form>
       </div>
